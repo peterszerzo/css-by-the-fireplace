@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    margin: 15px;
+  }
+}
+
+.button {
+  cursor: pointer;
+  transition: all 0.75s;
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 28px;
+  background-color: #2C5784;
+
+  span {
+    font-family: 'PT Sans';
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+
+  &:hover {
+    background-color: lighten(#E8640C, 5);
+  }
+}
