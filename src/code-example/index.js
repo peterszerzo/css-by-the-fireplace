@@ -5,9 +5,7 @@ import {render} from 'react-dom';
 import Header from './header';
 import './style.scss';
 
-function start() {
+domReady(() => {
   const node = document.getElementById('app');
   render(<Header/>, node);
-}
-
-domReady(start);
+});

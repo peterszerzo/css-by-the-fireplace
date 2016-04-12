@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-markup": "babel-node build.js",
-    "build-theme": "node-sass src/theme.scss -o public",
-    "watch-theme": "node-sass src/theme.scss -o public -w",
+    "build-content": "babel-node build.js",
+    "watch": "webpack --watch",
     "server": "python -m SimpleHTTPServer 1998"
   },
   "author": "",

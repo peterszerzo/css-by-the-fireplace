@@ -3,12 +3,15 @@ import path from 'path';
 
 export default {
 
-  entry: './code-example/src/index.js',
+  entry: {
+    'slides': './src/slides/index.js',
+    'code-example': './src/code-example/index.js'
+  },
 
   output: {
-    path: path.resolve('./code-example/build'),
+    path: path.resolve('./public'),
     publicPath: 'http://localhost:3000/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
 
   module: {
@@ -23,6 +26,10 @@ export default {
       {
         test: /\.scss$/,
         loaders: [ 'style', 'css', 'sass' ]
+      },
+      {
+        test: /\.css$/,
+        loaders: [ 'style', 'css' ]
       }
     ]
   },

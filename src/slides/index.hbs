@@ -2,12 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fireplace may turn orange</title>
+    <title>CSS by the fireplace</title>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <script src='public/slides.js'></script>
   </head>
   <body>
-    <div id='app'></div>
-    <script src='build/bundle.js'></script>
+    <div class='reveal'>
+      <div class='slides'>
+        {{#each slides}}
+          <section id='{{id}}'>
+            {{{html}}}
+          </section>
+        {{/each}}
+      </div>
+    </div>
   </body>
 </html>
